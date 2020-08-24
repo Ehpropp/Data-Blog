@@ -18,11 +18,11 @@ def main():
     oriented in a way that you can understand the entire topic with sources in the post,
     at least at a high level.
 
-    Select the post page from the dropdown menu in the sidebar to start looking at my posts.
+    Select the post page from the sidebar to start looking at any of the posts.
 
-    Let me know if you have any tips or ideas for posts or the general website. I'm open to an ideas on how
+    Let me know if you have any tips or ideas for posts or the general website. I'm open to any ideas on how
     I can make this better.
 
-    You can contact me from any of the links in the sidebar. 
+    You can contact me from any of the links in the sidebar or about page. 
 
     ''')

@@ -2,8 +2,8 @@
 import streamlit as st
 
 import src.home
-import src.about
 import src.posts
+import src.about
 
 MAIN_PAGES = {
     "Home": src.home,
