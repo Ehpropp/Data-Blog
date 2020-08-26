@@ -1,9 +1,8 @@
+'''File for the home page'''
 import streamlit as st
 
 
 def main():
-    st.title('The Data Blog')
-
     st.markdown('''
 
     Welcome to my data visualization and analysis blog!

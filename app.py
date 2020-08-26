@@ -15,6 +15,7 @@ MAIN_PAGES = {
 def main():
     """Main function for the app"""
 
+    st.title('The Data Blog')
     st.sidebar.title('Data Blog')
     st.sidebar.header('Pages')
     selection = st.sidebar.radio('Go to', list(MAIN_PAGES.keys()))
