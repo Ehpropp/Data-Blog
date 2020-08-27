@@ -8,10 +8,15 @@ Imports all the main files containing the posts.
 The relative file paths are stored in the POSTS dict
 in post_list.py.
 '''
-@st.cache
+
 def import_posts():
     for file in src.entries.post_list.POSTS.values():
         if file == "home":
+            continue
+        globals()[file] = importlib.import_module(file)
+    
+    for file in src.entries.post_list.POST_HELPERS.values():
+        if file == 'none':
             continue
         globals()[file] = importlib.import_module(file)
 

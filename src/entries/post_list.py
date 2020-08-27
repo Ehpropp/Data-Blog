@@ -10,3 +10,8 @@ POSTS = {
     'Overview': 'home',
     'Dividend Growth Visualization': 'src.entries.div_growth.dividend_growth_viz'
 }
+
+POST_HELPERS = {
+    'Overview': 'none',
+    'Dividend Growth Visualization': 'src.entries.div_growth.helper_functions'
+}
