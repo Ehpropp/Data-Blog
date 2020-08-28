@@ -25,7 +25,7 @@ def import_posts():
 import_posts()
 
 def main():
-    selection = st.sidebar.selectbox("", list(src.entries.post_list.POSTS.keys()))
+    selection = st.sidebar.selectbox('Posts', list(src.entries.post_list.POSTS.keys()))
     page = src.entries.post_list.POSTS[selection]
 
     if page == "home":

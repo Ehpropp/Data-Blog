@@ -8,7 +8,10 @@ import src.entries.div_growth.helper_functions as help
 
 def main():
     st.text('first post')
-    help.setup_data()
+    help.init_data()
+
+    selection = st.sidebar.selectbox('Company', list(help.DATA.keys()))
 
     #st.write(help.DATA['WMT'][2])
-    #help.show_stock_graphs('JNJ')
+    help.show_div_graph(selection)
+    help.show_yield_graph(selection)
