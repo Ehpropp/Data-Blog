@@ -44,3 +44,13 @@ def write_main_page():
         Posts will be previewed here as they are uploaded to the blog.
         """
     )
+
+    st.info(
+        '''
+        ### Dividend Growth Visualization - Post #1
+        In this post I'll be discussing, visualizing, and analysing the Dividend Growth Theory,
+        looking at if and how dividends can influence a stock price.
+
+        Go to the sidebar and select 'Dividend Growth Visualization from the dropdown menu.'
+        '''
+    )

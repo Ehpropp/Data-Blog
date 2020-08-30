@@ -8,7 +8,7 @@ def main():
     Welcome to my data visualization and analysis blog!
 
     Have you ever looked for a visual of some data, but never found just the _right_ thing?
-    Me too. And that's what prompted me to start this blog. I figured since I know exactly
+    Me too. And that's what prompted me to start this blog. I figured since I know
     what I want to see, why not take the data and do it myself?
 
     I'm Eli Propp, a Computer Engineering Student at the University of Waterloo.
@@ -19,8 +19,8 @@ def main():
 
     Select the post page from the sidebar to start looking at any of the posts.
 
-    Let me know if you have any tips or ideas for posts or the general website. I'm open to any ideas on how
-    I can make this better.
+    Let me know if you have any tips or ideas for posts or the general website. 
+    I'm always open to any ideas on how I can make this better.
 
     You can contact me from any of the links in the sidebar or about page. 
 

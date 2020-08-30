@@ -35,7 +35,7 @@ def load_data(path, date, prev_data):
     data = pd.read_csv(path, index_col='Date', parse_dates=True)
     data = pd.DataFrame(data=data)
     data = data.sort_values(by='Date')
-    data = data.loc[date:'2019-12-31', :]
+    data = data.loc[date:'2020-01-01', :]
 
     if 'div' in str(path):
         data['Dividends'] *= 4
@@ -78,3 +78,19 @@ def show_yield_graph(name):
     ax2 = sns.lineplot(x=DATA[name][2].index, y=DATA[name][2]['Yield'], color='orange')
     ax2.set_ylabel('Annual Dividend Yield', fontsize=12, color='orange')
     st.pyplot(fig)
+
+def show_share_growth(name, date):
+    DATA[name][0]['Date'] = DATA[name][0].index
+    tmp = DATA[name][0].loc[date:, :]
+    years = (tmp['Date'].iloc[-1] - tmp['Date'].iloc[0]).days/365
+    base = tmp['Close'].iloc[-1]/tmp['Close'].iloc[0]
+    growth = round((base**(1/years) - 1)*100, 2)
+    st.write('Annual Share Growth: ' + str(growth) + "%")
+
+def show_div_growth(name, date):
+    DATA[name][2]['Date'] = DATA[name][2].index
+    tmp = DATA[name][2].loc[date:, :]
+    years = (tmp['Date'].iloc[-1] - tmp['Date'].iloc[0]).days/365
+    base = tmp['Dividends'].iloc[-1]/tmp['Dividends'].iloc[0]
+    growth = round((base**(1/years) - 1)*100, 2)
+    st.write('Annual Dividend Growth: ' + str(growth) + "%")
