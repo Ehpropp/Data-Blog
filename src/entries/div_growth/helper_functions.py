@@ -2,6 +2,7 @@
 
 import streamlit as st
 import os
+import time
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -22,6 +23,8 @@ def init_data():
     DATA['MRU.TO'] = get_files('data/MRU.TO', '2000-01-01')
     DATA['PG'] = get_files('data/PG', '2000-01-01')
     DATA['WMT'] = get_files('data/WMT', '2000-01-01')
+
+    time.sleep(2)
 
     for item in DATA:
         DATA[item][2]['Dividends'] *= 4
