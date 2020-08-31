@@ -2,7 +2,6 @@
 
 import streamlit as st
 import os
-import time
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -16,15 +15,13 @@ DATA = {
     'WMT': []
 }
 
-@st.cache
+#@st.cache
 def init_data():
     DATA['BCE.TO'] = get_files('data/BCE.TO', '2000-06-01')
     DATA['JNJ'] = get_files('data/JNJ', '2000-01-01')
     DATA['MRU.TO'] = get_files('data/MRU.TO', '2000-01-01')
     DATA['PG'] = get_files('data/PG', '2000-01-01')
     DATA['WMT'] = get_files('data/WMT', '2000-01-01')
-
-    time.sleep(2)
 
     for item in DATA:
         DATA[item][2]['Dividends'] *= 4
@@ -35,6 +32,7 @@ def init_data():
 def get_files(path, date):
     data_list = []
     for filename in os.scandir(path):
+        st.text(filename)
         data = load_data(filename, date)
         data_list.append(data)
     return data_list
