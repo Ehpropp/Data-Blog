@@ -15,7 +15,7 @@ DATA = {
     'WMT': []
 }
 
-#@st.cache
+@st.cache
 def init_data():
     DATA['BCE.TO'] = get_files('data/BCE.TO', '2000-06-01')
     DATA['JNJ'] = get_files('data/JNJ', '2000-01-01')
@@ -31,8 +31,7 @@ def init_data():
 
 def get_files(path, date):
     data_list = []
-    for filename in os.scandir(path):
-        st.text(filename)
+    for filename in sorted(os.scandir(path), key=lambda e: e.name):
         data = load_data(filename, date)
         data_list.append(data)
     return data_list
