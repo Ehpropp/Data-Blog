@@ -23,20 +23,20 @@ def init_data():
     DATA['PG'] = get_files('data/PG', '2000-01-01')
     DATA['WMT'] = get_files('data/WMT', '2000-01-01')
 
-    for items in DATA.values():
-        items[2]['Dividends'] *= 4
-        add_div_yield(items[2], items[1])
-        if (len(items) > 3):
-            items[2] = adj_div_for_split(items[3], items[2])
+    for item in DATA:
+        DATA[item][2]['Dividends'] *= 4
+        add_div_yield(DATA[item][2], DATA[item][1])
+        if (len(DATA[item]) > 3):
+            DATA[item][2] = adj_div_for_split(DATA[item][3], DATA[item][2])
 
 def get_files(path, date):
     data_list = []
     for filename in os.scandir(path):
-        data = load_data(filename, date, data_list)
+        data = load_data(filename, date)
         data_list.append(data)
     return data_list
 
-def load_data(path, date, prev_data):
+def load_data(path, date):
     data = pd.read_csv(path, index_col='Date', parse_dates=True)
     data = pd.DataFrame(data=data)
     data = data.sort_values(by='Date')
