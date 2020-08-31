@@ -2,7 +2,7 @@
 
 This is the repository for my data blog, visualizing and analyzing data in easy to read way.
 
-You can check out the blog here: \_\_\_
+You can check out the blog here: [datavizblog.herokuapp.com](https://datavizblog.herokuapp.com/)
 
 ## About the App
 

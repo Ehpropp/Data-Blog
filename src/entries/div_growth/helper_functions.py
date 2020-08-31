@@ -38,7 +38,7 @@ def load_data(path, date, prev_data):
 
     if 'div' in str(path):
         data['Dividends'] *= 4
-        data = add_div_yield(data, prev_data[1])
+        #data = add_div_yield(data, prev_data[1])
 
     if 'split' in str(path):
         prev_data[2] = adj_div_for_split(data, prev_data[2])
