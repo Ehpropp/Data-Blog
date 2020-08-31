@@ -5,7 +5,6 @@ import os
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-import plotly
 pd.plotting.register_matplotlib_converters()
 
 DATA = {
