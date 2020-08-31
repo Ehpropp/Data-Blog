@@ -15,7 +15,7 @@ DATA = {
     'WMT': []
 }
 
-@st.cache
+#@st.cache
 def init_data():
     DATA['BCE.TO'] = get_files('data/BCE.TO', '2000-06-01')
     DATA['JNJ'] = get_files('data/JNJ', '2000-01-01')
@@ -38,7 +38,7 @@ def load_data(path, date, prev_data):
 
     if 'div' in str(path):
         data['Dividends'] *= 4
-        #data = add_div_yield(data, prev_data[1])
+        data = add_div_yield(data, prev_data[1])
 
     if 'split' in str(path):
         prev_data[2] = adj_div_for_split(data, prev_data[2])
