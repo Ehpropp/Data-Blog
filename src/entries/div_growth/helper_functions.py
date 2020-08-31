@@ -2,6 +2,7 @@
 
 import streamlit as st
 import os
+import time
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -15,7 +16,7 @@ DATA = {
     'WMT': []
 }
 
-#@st.cache
+@st.cache
 def init_data():
     DATA['BCE.TO'] = get_files('data/BCE.TO', '2000-06-01')
     DATA['JNJ'] = get_files('data/JNJ', '2000-01-01')
@@ -28,6 +29,7 @@ def get_files(path, date):
     for filename in os.scandir(path):
         data = load_data(filename, date, data_list)
         data_list.append(data)
+        time.sleep(0.5)
     return data_list
 
 def load_data(path, date, prev_data):
