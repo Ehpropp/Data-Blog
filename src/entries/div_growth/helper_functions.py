@@ -33,6 +33,7 @@ def get_files(path, date):
     return data_list
 
 def load_data(path, date, prev_data):
+    st.write(len(prev_data))
     data = pd.read_csv(path, index_col='Date', parse_dates=True)
     data = pd.DataFrame(data=data)
     data = data.sort_values(by='Date')
