@@ -2,7 +2,6 @@
 
 import streamlit as st
 import os
-import time
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -24,28 +23,24 @@ def init_data():
     DATA['PG'] = get_files('data/PG', '2000-01-01')
     DATA['WMT'] = get_files('data/WMT', '2000-01-01')
 
+    for items in DATA.values():
+        items[2]['Dividends'] *= 4
+        add_div_yield(items[2], items[1])
+        if (len(items) > 3):
+            items[2] = adj_div_for_split(items[3], items[2])
+
 def get_files(path, date):
     data_list = []
     for filename in os.scandir(path):
         data = load_data(filename, date, data_list)
         data_list.append(data)
-        time.sleep(0.5)
     return data_list
 
 def load_data(path, date, prev_data):
-    st.write(len(prev_data))
     data = pd.read_csv(path, index_col='Date', parse_dates=True)
     data = pd.DataFrame(data=data)
     data = data.sort_values(by='Date')
-    data = data.loc[date:'2020-01-01', :]
-
-    if 'div' in str(path):
-        data['Dividends'] *= 4
-        data = add_div_yield(data, prev_data[1])
-
-    if 'split' in str(path):
-        prev_data[2] = adj_div_for_split(data, prev_data[2])
-    
+    data = data.loc[date:'2020-01-01', :]    
     return data
 
 def add_div_yield(div_data, share_data):
