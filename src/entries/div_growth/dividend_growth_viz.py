@@ -40,13 +40,13 @@ def main():
 
         Pick any of the companies from the sidebar to view a graph of dividend vs share value from 2000 to 2020.
 
-        Note: All the data collected is from Yahoo Finance.
+        Note: All the data collected is from [Yahoo Finance](https://ca.finance.yahoo.com/).
         
         Note: Quick spikes then drops in the graph, like the two in MRU.TO, seem to be errors in the data.
     ''')
 
     selection = st.sidebar.selectbox('Company', list(help.DATA.keys()))
-    #help.show_div_graph(selection)
+    help.show_div_graph(selection)
 
     help.show_share_growth(selection, '2000-01-01')
     help.show_div_growth(selection, '2000-01-01')
@@ -60,8 +60,32 @@ def main():
         than the dividend growth rate for each of the stocks. But let's see what happens to the numbers when we caluclate
         from 2009 to 2020.
 
-        The growth rates will change based on the company selection.
+        The growth rates below will also change based on the company selection.
     ''')
 
     help.show_share_growth(selection, '2009-01-01')
     help.show_div_growth(selection, '2009-01-01')
+
+    st.write('''
+        Now the both the share and dividend growth rates are much closer, except Metro (MRU.TO), whose dividend grwoth rate seems to 
+        be through the roof.
+
+        So why 2009? Well in 2003 there was a smaller stock market crash because of the dot com bubble, and then in 2008
+        there was the major financial crisis which sent us into a recession. So within the first 10 years of the timeframe in the 
+        charts, there were two financial crises, once creating a major recession.
+
+        This makes a difference because the companies we're looking at may have had decent cashflow throughout the crises, enabling them
+        to keep growing their dividends. But from an investor point of view, people may have been fearful, just not had the money to invest, 
+        or had to liquidate stocks for a while after. This all could have affected the stock price, while not affecting the dividends
+        because of the sectors to which these companies belong.
+
+        So it seems that you may need to look at a longer time period than 20 years, especially when the first 10 had two stock market crashes,
+        to really see DGT at work. But when you look at 11 years with no recessions, DGT seems to be not so far off. This is just my speculation though. 
+        I may lengthen the time period analyzed in the future, but I need to figure out how to fix the errors with the data before I do that.
+
+        If you're interested in reading more about dividend growth from a more experienced investor, you can check out Tom Conolly's website
+        [dividendgrowth.ca](http://www.dividendgrowth.ca/dividendgrowth/).
+
+        Note: I am looking into making the graphs interactive and allowing readers to look at any stock. It'd be interesting to compare the 
+        performance of dividend growth stocks, general dividend paying stocks, and those that don't pay any dividends.
+    ''')

@@ -25,6 +25,7 @@ def import_posts():
 import_posts()
 
 def main():
+    st.title('The Data Viz Blog - Posts')
     selection = st.sidebar.selectbox('Posts', list(src.entries.post_list.POSTS.keys()))
     page = src.entries.post_list.POSTS[selection]
 
@@ -44,7 +45,7 @@ def write_main_page():
         Posts will be previewed here as they are uploaded to the blog.
         """
     )
-
+    # Post #1 Info
     st.info(
         '''
         ### Dividend Growth Visualization - Post #1

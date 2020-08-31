@@ -15,7 +15,6 @@ MAIN_PAGES = {
 def main():
     """Main function for the app"""
 
-    st.title('The Data Viz Blog')
     st.sidebar.title('Data Viz Blog')
     st.sidebar.header('Pages')
     selection = st.sidebar.radio('Go to', list(MAIN_PAGES.keys()))

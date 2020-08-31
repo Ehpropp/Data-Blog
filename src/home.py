@@ -3,6 +3,7 @@ import streamlit as st
 
 
 def main():
+    st.title('The Data Viz Blog')
     st.markdown('''
 
     Welcome to my data visualization and analysis blog!

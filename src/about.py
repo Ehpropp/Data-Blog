@@ -2,6 +2,7 @@
 import streamlit as st
 
 def main():
+    st.title('The Data Viz Blog - About')
     st.write('''
         
     ''')
