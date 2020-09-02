@@ -27,8 +27,8 @@ def main():
         LinkedIn: [Eli Propp](https://www.linkedin.com/in/eli-propp-7a13b419a/)  
         My Website: [ehpropp.github.io/Website](https://ehpropp.github.io/Website/)
 
-        Streamlit: [streamlit.io](https://www.streamlit.io/)
-        Awesome-Streamlit: [awesome-streamlit.org](http://www.awesome-streamlit.org)
+        Streamlit: [streamlit.io](https://www.streamlit.io/)  
+        Awesome-Streamlit: [awesome-streamlit.org](http://www.awesome-streamlit.org)  
         Awesome-Streamlit Repo: [MarkSkovMadsen/awesome-streamlit](https://github.com/MarcSkovMadsen/awesome-streamlit)
 
     ''')
