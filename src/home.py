@@ -1,7 +1,6 @@
 '''File for the home page'''
 import streamlit as st
 
-
 def main():
     st.title('The Data Viz Blog')
     st.markdown('''
@@ -24,5 +23,4 @@ def main():
     I'm always open to any ideas on how I can make this better.
 
     You can contact me from any of the links in the sidebar or about page. 
-
     ''')

@@ -19,18 +19,18 @@ def main():
         Dividends are a piece of a company’s earnings that the company pays out to the shareholders. That’s it. 
         Usually payed quarterly, the board of directors will declare a dividend at some point, and when the set date comes, 
         you get the value of the dividend for every share of the company you own. So if the dividend is $0.10, that means you'll
-        get 10 cents for every share you own. It’s essentially the company paying you for owning a piece of the company, 
+        get 10 cents for every share you own. It’s essentially the company paying you for owning a piece of the company (your shares), 
         because that’s what a share is after all.
 
         One of the benefits of dividends is that you don’t need to sell shares to gain actual income. 
         Some people use this to supplement their income, some use it to reinvest in the same or other stocks, 
         while you keep all the (hopefully) growing shares. The choice is yours.
 
-        Some people don’t see any difference between selling shares and receiving dividends. 
+        Some people don’t see any difference between selling shares and receiving dividends to generate income. 
         There is a point to be made here, but this is a discussion for another post.
 
         Not all companies pay dividends, and of the ones that do, not all focus on growing the dividends. 
-        Companies that do grow their dividends are known as Dividend Growth Stocks (DGS). These are the types of stocks 
+        Companies that do grow their dividends are known as dividend growth stocks. These are the types of stocks 
         Connolly looks for and we’ll use to test the theory.
 
         Now that we’ve discussed dividends a little, let’s look at DGT. In the words of Connolly himself: 
@@ -53,7 +53,7 @@ def main():
 
     st.write('''
         It should be noted that to normalize the dividend data, I divided corresponding dividend value by stock split ratios.
-        This made sense to me since just because the dividend value dropped because of the stock split, doesn't mean they slashed
+        This made sense to me since just because the dividend value dropped because of a stock split, doesn't mean they slashed
         the dividends. It just means there are more shares than before, and they couldn't keep the dividend at the same value.
 
         After looking at the graphs and growth rates, the share growth seems to be quite lower
@@ -67,25 +67,26 @@ def main():
     help.show_div_growth(selection, '2009-01-01')
 
     st.write('''
-        Now the both the share and dividend growth rates are much closer, except Metro (MRU.TO), whose dividend grwoth rate seems to 
-        be through the roof.
+        Now the both the share and dividend growth rates are much closer (around 2'%' difference between stock and dividend growth), 
+        except Metro (MRU.TO), whose dividend growth rate seems to be through the roof.
 
         So why 2009? Well in 2003 there was a smaller stock market crash because of the dot com bubble, and then in 2008
         there was the major financial crisis which sent us into a recession. So within the first 10 years of the timeframe in the 
-        charts, there were two financial crises, once creating a major recession.
+        charts, there were two financial crises, one creating a major recession.
 
         This makes a difference because the companies we're looking at may have had decent cashflow throughout the crises, enabling them
         to keep growing their dividends. But from an investor point of view, people may have been fearful, just not had the money to invest, 
-        or had to liquidate stocks for a while after. This all could have affected the stock price, while not affecting the dividends
-        because of the sectors to which these companies belong.
+        or had to liquidate investments for a while after. This all could have affected the stock price, while not affecting the dividends as 
+        people still need the services these companies provide (like telecomm and consumer staples).
 
         So it seems that you may need to look at a longer time period than 20 years, especially when the first 10 had two stock market crashes,
         to really see DGT at work. But when you look at 11 years with no recessions, DGT seems to be not so far off. This is just my speculation though. 
-        I may lengthen the time period analyzed in the future, but I need to figure out how to fix the errors with the data before I do that.
+        I may lengthen the time period analyzed in the future, but I need to figure out how to fix the errors within the data before I do that.
 
         If you're interested in reading more about dividend growth from a more experienced investor, you can check out Tom Conolly's website
-        [dividendgrowth.ca](http://www.dividendgrowth.ca/dividendgrowth/).
+        [dividendgrowth.ca](http://www.dividendgrowth.ca/dividendgrowth/). He goes quite in depth in his analysis, while still keeping it easy 
+        to follow.
 
         Note: I am looking into making the graphs interactive and allowing readers to look at any stock. It'd be interesting to compare the 
-        performance of dividend growth stocks, general dividend paying stocks, and those that don't pay any dividends.
+        performance over many years of dividend growth stocks, general dividend paying stocks, and those that don't pay any dividends.
     ''')

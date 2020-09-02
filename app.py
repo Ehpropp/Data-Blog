@@ -19,6 +19,7 @@ def main():
     st.sidebar.header('Pages')
     selection = st.sidebar.radio('Go to', list(MAIN_PAGES.keys()))
 
+    # Every page has a main function which executes necessary code for that page
     page = MAIN_PAGES[selection]
     page.main()
 
@@ -34,7 +35,6 @@ def main():
         "LinkedIn: [Eli Propp](https://www.linkedin.com/in/eli-propp-7a13b419a/)  \n"
         "GitHub: [Eli Propp](https://github.com/Ehpropp)"
     )
-
 
 if __name__ == '__main__':
     main()
