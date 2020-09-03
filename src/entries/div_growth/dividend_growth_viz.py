@@ -41,8 +41,6 @@ def main():
         Pick any of the companies from the sidebar to view a graph of dividend vs share value from 2000 to 2020.
 
         Note: All the data collected is from [Yahoo Finance](https://ca.finance.yahoo.com/).
-        
-        Note: Quick spikes then drops in the graph, like the two in MRU.TO, seem to be errors in the data.
     ''')
 
     selection = st.sidebar.selectbox('Company', list(help.DATA.keys()))
