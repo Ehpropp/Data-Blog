@@ -5,34 +5,47 @@ import os
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import yfinance as yf
 pd.plotting.register_matplotlib_converters()
+
+TICKERS = dict()
 
 '''Will store all the pandas dataframes'''
 DATA = {
-    'BCE.TO': [],
-    'JNJ': [],
-    'MRU.TO': [],
-    'PG': [],
-    'WMT': []
+    'BCE.TO': dict(),
+    'JNJ': dict(),
+    'MRU.TO': dict(),
+    'PG': dict(),
+    'WMT': dict()
 }
 
 @st.cache
 def init_data():
-    DATA['BCE.TO'] = get_files('data/BCE.TO', '2000-06-01')
-    DATA['JNJ'] = get_files('data/JNJ', '2000-01-01')
-    DATA['MRU.TO'] = get_files('data/MRU.TO', '2000-01-01')
-    DATA['PG'] = get_files('data/PG', '2000-01-01')
-    DATA['WMT'] = get_files('data/WMT', '2000-01-01')
+    TICKERS['BCE.TO'] = yf.Ticker("bce.to")
+    TICKERS['JNJ'] = yf.Ticker("jnj")
+    TICKERS['MRU.TO'] = yf.Ticker("mru.to")
+    TICKERS['PG'] = yf.Ticker("pg")
+    TICKERS['WMT'] = yf.Ticker("wmt")
 
-    # Not called in the get_files() hierarchy to ensure list indices have been written to
-    # Works locally if called in get_files() hierarchy but not on Heroku
+    DATA['BCE.TO'].update({'PRICE': pd.DataFrame(TICKERS['BCE.TO'].history(period="max", interval="1d", start="2000-01-01", end="2020-01-01"))})
+    DATA['JNJ'].update({'PRICE': pd.DataFrame(TICKERS['JNJ'].history(period="max", interval="1d", start="2000-01-01", end="2020-01-01"))})
+    DATA['MRU.TO'].update({'PRICE': pd.DataFrame(TICKERS['MRU.TO'].history(period="max", interval="1d", start="2000-01-01", end="2020-01-01"))})
+    DATA['PG'].update({'PRICE': pd.DataFrame(TICKERS['PG'].history(period="max", interval="1d", start="2000-01-01", end="2020-01-01"))})
+    DATA['WMT'].update({'PRICE': pd.DataFrame(TICKERS['WMT'].history(period="max", interval="1d", start="2000-01-01", end="2020-01-01"))})
+
+    DATA['BCE.TO']['DIV'] =  pd.DataFrame(TICKERS['BCE.TO'].dividends)
+    DATA['JNJ']['DIV'] =  pd.DataFrame(TICKERS['JNJ'].dividends)
+    DATA['MRU.TO']['DIV'] =  pd.DataFrame(TICKERS['MRU.TO'].dividends)
+    DATA['PG']['DIV'] =  pd.DataFrame(TICKERS['PG'].dividends)
+    DATA['WMT']['DIV'] =  pd.DataFrame(TICKERS['WMT'].dividends)
+
     for item in DATA:
-        DATA[item][2]['Dividends'] *= 4
-        add_div_yield(DATA[item][2], DATA[item][1])
+        DATA[item]['DIV']['Dividends'] *= 4
+        # add_div_yield(DATA[item]['DIV'], DATA['Price'])
         # Not all stocks have split csv's
         # Prevents Index Error
-        if (len(DATA[item]) > 3):
-            DATA[item][2] = adj_div_for_split(DATA[item][3], DATA[item][2])
+        # if (len(DATA[item]) > 3):
+        #     DATA[item][2] = adj_div_for_split(DATA[item][3], DATA[item][2])
 
 '''
 Loads the csv file paths and passes files to load_data().
@@ -79,11 +92,11 @@ def adj_div_for_split(split_data, div_data):
 def show_div_graph(name):
     fig, ax1 = plt.subplots(figsize=(8,4))
     ax1.set_title(name + ' Share Price vs Annual Dividend', fontsize=14)
-    ax1 = sns.lineplot(x=DATA[name][0].index, y=DATA[name][0]['Close'], color='blue')
+    ax1 = sns.lineplot(x=DATA[name]['PRICE'].index, y=DATA[name]['PRICE']['Close'], color='blue')
     ax1.set_xlabel('Date', fontsize=12)
     ax1.set_ylabel('Share Price', fontsize=12, color='blue')
     ax2 = ax1.twinx()
-    ax2 = sns.lineplot(x=DATA[name][2].index, y=DATA[name][2]['Dividends'], color='orange')
+    ax2 = sns.lineplot(x=DATA[name]['DIV'].index, y=DATA[name]['DIV']['Dividends'], color='orange')
     ax2.set_ylabel('Annual Dividend Payout', fontsize=12, color='orange')
     st.pyplot(fig)
 
@@ -108,8 +121,8 @@ Uses equation: final = initial*(1 + i)^t where t is number of years, i is annual
 '''
 def show_share_growth(name, date):
     # Copies dates from index col
-    DATA[name][0]['Date'] = DATA[name][0].index
-    tmp = DATA[name][0].loc[date:, :]
+    DATA[name]['PRICE']['Date'] = DATA[name]['PRICE'].index
+    tmp = DATA[name]['PRICE'].loc[date:, :]
     # Calculates years based on first and last date in df
     years = (tmp['Date'].iloc[-1] - tmp['Date'].iloc[0]).days/365
     # Calculates exponent base as (last share price)/(first share price)
@@ -123,8 +136,8 @@ Uses equation: final = initial*(1 + i)^t where t is number of years, i is annual
 '''
 def show_div_growth(name, date):
     # Copies dates from index col
-    DATA[name][2]['Date'] = DATA[name][2].index
-    tmp = DATA[name][2].loc[date:, :]
+    DATA[name]['DIV']['Date'] = DATA[name]['DIV'].index
+    tmp = DATA[name]['DIV'].loc[date:, :]
     # Calculates years based on first and last date in df
     years = (tmp['Date'].iloc[-1] - tmp['Date'].iloc[0]).days/365
     # Calculates exponent base as (last dividend)/(first dividend)
