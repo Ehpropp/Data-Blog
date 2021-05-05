@@ -8,10 +8,12 @@ If changing the dictionary value for 'Overview', change the if statement in post
 '''
 POSTS = {
     'Overview': 'home',
-    'Dividend Growth Visualization': 'src.entries.div_growth.dividend_growth_viz'
+    'Dividend Growth Visualization': 'src.entries.div_growth.dividend_growth_viz',
+    'VIX vs. Index': 'src.entries.vix.vix_index_comparison'
 }
 
 POST_HELPERS = {
     'Overview': 'none',
-    'Dividend Growth Visualization': 'src.entries.div_growth.helper_functions'
+    'Dividend Growth Visualization': 'src.entries.div_growth.helper_functions',
+    'VIX vs. Index': 'src.entries.vix.helper_functions'
 }

@@ -23,9 +23,9 @@ def main():
         by Mark Skov Madsen. You can access them in the links down below.
 
         ## Links
-        The GitHub Repo: [ehpropp/Data-Blog](https://github.com/Ehpropp/Data-Blog)  
-        LinkedIn: [Eli Propp](https://www.linkedin.com/in/eli-propp-7a13b419a/)  
-        My Website: [ehpropp.github.io/Website](https://ehpropp.github.io/Website/)
+        The GitHub Repo: [ehpropp/Data-Blog](https://github.com/elipropp/Data-Blog)  
+        LinkedIn: [Eli Propp](https://www.linkedin.com/in/elipropp)  
+        My Website: [ehpropp.github.io/Website](https://elipropp.github.io/Website/)
 
         Streamlit: [streamlit.io](https://www.streamlit.io/)  
         Awesome-Streamlit: [awesome-streamlit.org](http://www.awesome-streamlit.org)  
