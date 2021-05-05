@@ -4,3 +4,4 @@ matplotlib==3.2.2
 seaborn==0.10.1
 plotly==4.14.3
 yfinance==0.1.55
+statsmodels==0.12.0
