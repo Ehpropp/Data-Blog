@@ -19,6 +19,7 @@ DATA = {
     'PERCENT CHANGE': pd.DataFrame()
 }
 
+@st.cache
 def init():
     get_data()
     modify_data()
@@ -67,14 +68,15 @@ def make_line_chart(index_name):
     fig.update_yaxes(title_text="<b></b> VIX Value", secondary_y=False)
     fig.update_yaxes(title_text=index_name + " Value", secondary_y=True)
 
-    st.plotly_chart(fig)
+    return fig
 
 def make_scatter_plot(index_name):
     fig = px.scatter(DATA['PERCENT CHANGE'], x='VIX', y=index_name, trendline="ols")
     fig.update_layout(title_text="CBOE VIX vs. " + index_name + " Scatter Plot")
     fig.update_xaxes(title_text="VIX Daily Percent Change")
     fig.update_yaxes(title_text=index_name + " Daily Percent Change")
-    st.plotly_chart(fig)
+
+    return fig
 
 def show_pd_corr():
     st.write(DATA['PERCENT CHANGE'].corr())

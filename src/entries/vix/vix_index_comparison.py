@@ -46,7 +46,7 @@ def main():
     ''')
 
     selection = st.sidebar.selectbox('Index', help.INDEXES)
-    help.make_line_chart(selection)
+    st.plotly_chart(help.make_line_chart(selection))
 
     st.write(''' 
         After looking at the line chart for each index, it seems that maybe the VIX and the index values could be negatively correlated. 
@@ -61,7 +61,7 @@ def main():
         and see if there's a trend. Take a look at the scatter plot below (it's also interactive). 
     ''')
 
-    help.make_scatter_plot(selection)
+    st.plotly_chart(help.make_scatter_plot(selection))
 
     st.write('''
         Now the relationship is starting to look much clearer. Even without the trendline, it's pretty clear that each of the indexes 
