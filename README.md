@@ -29,6 +29,8 @@ I'll try and maintain a list of the posts and specific repository folders here.
 
 To create the app I used Streamlit. Streamlit is a Python library that allows for simple, elegant and rapid production of web apps that have anything to do with data. It was released in 2019 and they're always adding more to it, so I'm definitely excited to see how I can add to the blog through Streamlit.
 
+To collect some of the finance related data, I used yfinance. yfinance is a Python library that allows you to get stock market data and history with a simple function call.
+
 To read and process the data I used Pandas. Pandas is an extremely useful open source Python library used to read, manipulate and analyze data.
 
 The graphs were created using Seaborn or Plotly. Seaborn is a Python library built ontop of Matplotlib used to create nice out-of-the-box charts for data visualization. Plotly is an Python graphing library that makes cool interactive charts.
@@ -36,6 +38,7 @@ The graphs were created using Seaborn or Plotly. Seaborn is a Python library bui
 ### Links to the Libraries
 
 - Streamlit: [streamlit.io](https://www.streamlit.io/)
+- yfinance: [pypi.org/project/yfinance/](https://pypi.org/project/yfinance/)
 - Pandas: [pandas.pydata.org](https://pandas.pydata.org/)
 - Seaborn: [seaborn.pydata.org](https://seaborn.pydata.org/)
 - Ploty: [plotly.com](https://plotly.com/)

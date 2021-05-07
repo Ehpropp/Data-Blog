@@ -16,7 +16,7 @@ def main():
         ## About Me
         This blog was developed and is maintained by me, Eli Propp. I'm a Computer Engineering student at the University of Waterloo,
         interested in Data Science, Machine Learning, Software Development and Computer Systems. You can learn more about me
-        and my expriences from my Website or LinkedIn, linked in the sidebar and down below.
+        and my experiences from my Website or LinkedIn, linked in the sidebar and down below.
 
         ## Resources
         Definitely check out the Streamlit website, and an open-source application called awesome-streamlit, developed and maintained 

@@ -53,7 +53,7 @@ def write_main_page():
         In this post I'll be taking a look at the volatility index (VIX) and seeing how its
         movements are related to the stock market.
 
-        Go to the sidebar and select VIX vs. Index.
+        Go to the sidebar and select 'Fear and the Market' from the dropdown menu.
         '''
     )
 
