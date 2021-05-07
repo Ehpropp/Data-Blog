@@ -22,21 +22,26 @@ I plan on writing about mutliple different topics over time, but at the beginnin
 
 I'll try and maintain a list of the posts and specific repository folders here.
 
-- Dividend Growth Visualization - [Folder](https://github.com/Ehpropp/Data-Blog/tree/master/src/entries/div_growth)
+- Dividend Growth Visualization - [Folder](https://github.com/elipropp/Data-Blog/tree/master/src/entries/div_growth)
+- How Fear Determines the Market - [Folder](https://github.com/elipropp/Data-Blog/tree/master/src/entries/vix)
 
 ## Libraries
 
 To create the app I used Streamlit. Streamlit is a Python library that allows for simple, elegant and rapid production of web apps that have anything to do with data. It was released in 2019 and they're always adding more to it, so I'm definitely excited to see how I can add to the blog through Streamlit.
 
+To collect some of the finance related data, I used yfinance. yfinance is a Python library that allows you to get stock market data and history with a simple function call.
+
 To read and process the data I used Pandas. Pandas is an extremely useful open source Python library used to read, manipulate and analyze data.
 
-The graphs were created using Seaborn. Seaborn is a Python library built ontop of Matplotlib used to create nice out-of-the-box charts for data visualization.
+The graphs were created using Seaborn or Plotly. Seaborn is a Python library built ontop of Matplotlib used to create nice out-of-the-box charts for data visualization. Plotly is an Python graphing library that makes cool interactive charts.
 
 ### Links to the Libraries
 
 - Streamlit: [streamlit.io](https://www.streamlit.io/)
+- yfinance: [pypi.org/project/yfinance/](https://pypi.org/project/yfinance/)
 - Pandas: [pandas.pydata.org](https://pandas.pydata.org/)
 - Seaborn: [seaborn.pydata.org](https://seaborn.pydata.org/)
+- Ploty: [plotly.com](https://plotly.com/)
 
 ## Contact & Feedback
 
@@ -44,4 +49,4 @@ If you enjoyed looking at the blog, have feedback on how I can improve it, a top
 
 Feel free to submit a pull request if you have any suggestions you would like to try and fix or implement yourself.
 
-If you're interested in any of the other projects I've worked on, check out my other repositiories on my GitHub or take a look at my Website (hosted with GitHub Pages from my 'Website repository'): [ehpropp.github.io/Website](https://ehpropp.github.io/Website/).
+If you're interested in any of the other projects I've worked on, check out my other repositiories on my GitHub or take a look at my Website (hosted with GitHub Pages from my 'Website repository'): [elipropp.github.io/Website](https://elipropp.github.io/Website/).

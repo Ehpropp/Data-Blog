@@ -27,13 +27,13 @@ def main():
     st.sidebar.info(
         "This blog is maintained by Eli Propp. "
         "You can learn more about me on the about page or at "
-        "[ehpropp.github.io/Website](https://ehpropp.github.io/Website/)"
+        "[elipropp.github.io/Website](https://elipropp.github.io/Website/)"
     )
 
     st.sidebar.header('Links')
     st.sidebar.info(
-        "LinkedIn: [Eli Propp](https://www.linkedin.com/in/eli-propp-7a13b419a/)  \n"
-        "GitHub: [Eli Propp](https://github.com/Ehpropp)"
+        "LinkedIn: [Eli Propp](https://www.linkedin.com/in/elipropp)  \n"
+        "GitHub: [Eli Propp](https://github.com/elipropp)"
     )
 
 if __name__ == '__main__':

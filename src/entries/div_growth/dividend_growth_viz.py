@@ -87,4 +87,7 @@ def main():
 
         Note: I am looking into making the graphs interactive and allowing readers to look at any stock. It'd be interesting to compare the 
         performance over many years of dividend growth stocks, general dividend paying stocks, and those that don't pay any dividends.
+
+        Disclaimer: None of the information provided here is investment advice. It is purely for entertainment purposes. 
+        Before making any investment, it solely your responsibility to do research and understand what you're investing in. 
     ''')

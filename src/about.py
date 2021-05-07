@@ -16,16 +16,16 @@ def main():
         ## About Me
         This blog was developed and is maintained by me, Eli Propp. I'm a Computer Engineering student at the University of Waterloo,
         interested in Data Science, Machine Learning, Software Development and Computer Systems. You can learn more about me
-        and my expriences from my Website or LinkedIn, linked in the sidebar and down below.
+        and my experiences from my Website or LinkedIn, linked in the sidebar and down below.
 
         ## Resources
         Definitely check out the Streamlit website, and an open-source application called awesome-streamlit, developed and maintained 
         by Mark Skov Madsen. You can access them in the links down below.
 
         ## Links
-        The GitHub Repo: [ehpropp/Data-Blog](https://github.com/Ehpropp/Data-Blog)  
-        LinkedIn: [Eli Propp](https://www.linkedin.com/in/eli-propp-7a13b419a/)  
-        My Website: [ehpropp.github.io/Website](https://ehpropp.github.io/Website/)
+        The GitHub Repo: [elipropp/Data-Blog](https://github.com/elipropp/Data-Blog)  
+        LinkedIn: [Eli Propp](https://www.linkedin.com/in/elipropp)  
+        My Website: [elipropp.github.io/Website](https://elipropp.github.io/Website/)
 
         Streamlit: [streamlit.io](https://www.streamlit.io/)  
         Awesome-Streamlit: [awesome-streamlit.org](http://www.awesome-streamlit.org)  

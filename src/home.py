@@ -7,11 +7,11 @@ def main():
 
     Welcome to my data visualization and analysis blog!
 
-    Have you ever looked for a visual of some data, but never found just the _right_ thing?
-    Me too. And that's what prompted me to start this blog. I figured since I know
-    what I want to see, why not take the data and do it myself?
-
     I'm Eli Propp, a Computer Engineering Student at the University of Waterloo.
+
+    Currently I'm diving deeper into the world of data science, and to do so I realized I need to 
+    become more comfortable working with data. So I figured, why not write create a blog and share 
+    my findings with some hopefully nice visualizations?
 
     The blog posts will be on a range of topics, but I'll be starting with finance. It'll be 
     oriented in a way that you can understand the entire topic with sources in the post,

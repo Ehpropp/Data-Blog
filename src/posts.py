@@ -42,9 +42,21 @@ def write_main_page():
         This is the main page for the posts. You can select a post
         from the dropdown menu in the sidebar.
 
-        Posts will be previewed here as they are uploaded to the blog.
+        Recent posts will be previewed here as they are uploaded to the blog.
         """
     )
+
+    # Post #1 Info
+    st.info(
+        '''
+        ### How Fear Determines the Market - Post #2
+        In this post I'll be taking a look at the volatility index (VIX) and seeing how its
+        movements are related to the stock market.
+
+        Go to the sidebar and select 'Fear and the Market' from the dropdown menu.
+        '''
+    )
+
     # Post #1 Info
     st.info(
         '''
@@ -52,6 +64,6 @@ def write_main_page():
         In this post I'll be discussing, visualizing, and analysing the Dividend Growth Theory,
         looking at if and how dividends can influence a stock price.
 
-        Go to the sidebar and select 'Dividend Growth Visualization from the dropdown menu.'
+        Go to the sidebar and select 'Dividend Growth Visualization' from the dropdown menu.
         '''
     )
