@@ -19,13 +19,13 @@ def main():
         and my experiences from my Website or LinkedIn, linked in the sidebar and down below.
 
         ## Resources
-        Definitely check out the Streamlit website, and an open-source application called awesome-streamlit, developed and maintained 
-        by Mark Skov Madsen. You can access them in the links down below.
+        Definitely check out the Streamlit website for more information and how to get started with your own app! Also definitely take a look at 
+        an open-source application called awesome-streamlit, developed and maintained by Mark Skov Madsen. You can access them in the links down below.
 
         ## Links
         The GitHub Repo: [elipropp/Data-Blog](https://github.com/elipropp/Data-Blog)  
         LinkedIn: [Eli Propp](https://www.linkedin.com/in/elipropp)  
-        My Website: [elipropp.github.io/Website](https://elipropp.github.io/Website/)
+        My Website: [elipropp.github.io/Web](https://elipropp.github.io/Web/)
 
         Streamlit: [streamlit.io](https://www.streamlit.io/)  
         Awesome-Streamlit: [awesome-streamlit.org](http://www.awesome-streamlit.org)  
