@@ -16,7 +16,7 @@ DATA = {
     'WMT': []
 }
 
-@st.cache
+# @st.cache
 def init_data():
     DATA['BCE.TO'] = get_files('data/BCE.TO', '2000-06-01')
     DATA['JNJ'] = get_files('data/JNJ', '2000-01-01')

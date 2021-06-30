@@ -19,7 +19,7 @@ DATA = {
     'PERCENT CHANGE': pd.DataFrame()
 }
 
-@st.cache
+# @st.cache
 def init():
     get_data()
     modify_data()
