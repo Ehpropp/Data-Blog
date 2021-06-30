@@ -27,7 +27,7 @@ def main():
     st.sidebar.info(
         "This blog is maintained by Eli Propp. "
         "You can learn more about me on the about page or at "
-        "[elipropp.github.io/Website](https://elipropp.github.io/Website/)"
+        "[elipropp.github.io/Web/](https://elipropp.github.io/Web/)"
     )
 
     st.sidebar.header('Links')
